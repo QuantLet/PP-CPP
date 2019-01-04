@@ -1,30 +1,3 @@
-
-[<img src="https://github.com/QuantLet/Styleguide-and-FAQ/blob/master/pictures/banner.png" width="888" alt="Visit QuantNet">](http://quantlet.de/)
-
-## [<img src="https://github.com/QuantLet/Styleguide-and-FAQ/blob/master/pictures/qloqo.png" alt="Visit QuantNet">](http://quantlet.de/) **MSM_LIL** [<img src="https://github.com/QuantLet/Styleguide-and-FAQ/blob/master/pictures/QN2.png" width="60" alt="Visit QuantNet 2.0">](http://quantlet.de/)
-
-```yaml
-
-Name of QuantLet : PP-CPP
-
-Published in : 
-
-Description : 'Simulation of Poisson Process and Compound Poisson Process with Poisson Generating Function.'
-
-Keywords : compound Poisson process, Poisson process, simulation, plot
-
-Author : Xiaohao Ji
-
-Submitted : Fri, January 04 2019 by Xiaohao Ji
-
-```
-
-![Picture1](PP-CPP.png)
-
-
-### R Code:
-```r
-
 # Clearing Variables and Close Windows
 rm(list = ls(all = TRUE))
 graphics.off()
@@ -104,6 +77,7 @@ colnames(S_PP) = col_name
 colnames(S_CPP) = col_name
 
 # Plotting
+rng('PP-CPP.pdf')
 pic_1 = xyplot(S1 + S2 + S3 + S4 + S5 + S6 + S7 + S8 + S9 + S10 ~ time, data = S_PP, 
        type = "l", 
        xlab = list(label = "Time", cex = 1), 
@@ -111,7 +85,9 @@ pic_1 = xyplot(S1 + S2 + S3 + S4 + S5 + S6 + S7 + S8 + S9 + S10 ~ time, data = S
        scales=list(tck=c(1), x=list(cex=1), y=list(cex=1)),
        # main=list(label = "Simulated Poisson Process", cex = 2),
        auto.key = FALSE)
+# dev.off()
 
+# pdf('CPP.pdf')
 pic_2 = xyplot(S1 + S2 + S3 + S4 + S5 + S6 + S7 + S8 + S9 + S10 ~ time, data = S_CPP, 
        type = "l", 
        xlab = list(label = "Time", cex = 1), 
@@ -122,5 +98,4 @@ pic_2 = xyplot(S1 + S2 + S3 + S4 + S5 + S6 + S7 + S8 + S9 + S10 ~ time, data = S
 
 print(pic_1, position=c(0, .5, 1, 1), more=TRUE)
 print(pic_2, position=c(0, 0, 1, .5))
-
-```
+dev.off()

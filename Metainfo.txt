@@ -1,0 +1,16 @@
+
+Name of QuantLet : PP-CPP
+
+Published in : 
+
+Description : 'Simulation of Poisson Process and Compound Poisson Process with Poisson Generating Function.'
+
+Keywords : 
+- compound Poisson process 
+- Poisson process
+- simulation
+- plot
+
+Author : Xiaohao Ji
+
+Submitted : Fri, January 04 2019 by Xiaohao Ji
