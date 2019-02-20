@@ -1,5 +1,5 @@
 
-Name of QuantLet : PP-CPP
+Name of QuantLet : PP_CPP_Simulation
 
 Published in : 
 
